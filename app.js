@@ -1,7 +1,10 @@
-var express = require('express')
-   app = express(), // Web framework to handle routing requests
-   bodyParser = require('body-parser'),
+var express = require('express');
+var app = express(); // Web framework to handle routing requests
+var bodyParser = require('body-parser'),
+var PORT = process.env.PORT || 8080;
  app.use(bodyParser());
  app.use('/',express.static(__dirname));
- app.listen(8080);
- console.log('Get-shit-done server listening on port 8080');
+ app.listen(PORT,function(){
+     console.log('Bob says hey server listening on port '+PORT+"!");
+
+ });
